@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.56470588235294117" green="0.68627450980392157" blue="0.77254901960784317" alpha="1"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="90" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="424" width="560" height="30"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2" green="0.41960784313725491" blue="0.52941176470588236" alpha="1"/>
+                                <state key="normal" title="enter with Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <segue id="292" destination="240" kind="show" identifier="loginSegue"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="98" translatesAutoresizingMaskIntoConstraints="NO" image="Images/News Filled-500.png" misplaced="YES">
+                                <rect key="frame" x="248" y="94" width="128" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-77" y="79" width="256" height="256"/>
+                                </variation>
+                                <constraints>
+                                    <constraint id="109" firstAttribute="width" constant="128"/>
+                                    <constraint id="110" firstAttribute="height" constant="128"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="91" firstItem="90" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="92" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="90" secondAttribute="trailing" constant="20"/>
+                            <constraint id="93" firstItem="90" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="94" firstItem="wfy-db-euE" firstAttribute="top" secondItem="90" secondAttribute="bottom" constant="100"/>
+                            <constraint id="111" firstItem="98" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30"/>
+                            <constraint id="112" firstItem="98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="12"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Title" id="87" key="navigationItem"/>
+                    <connections>
+                        <outlet property="enterWithFacebookButton" destination="90" id="name-outlet-90"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192" y="3"/>
+        </scene>
+        <scene sceneID="5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="0.0" y="20" width="508" height="44"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="88" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="-1"/>
+        </scene>
+        <scene sceneID="239">
+            <objects>
+                <viewController id="240" sceneMemberID="viewController" customClass="ListViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="237"/>
+                        <viewControllerLayoutGuide type="bottom" id="238"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="241">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="204" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="107" width="374" height="493"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0" id="205" rowHeight="100" reuseIdentifier="postCell" customClass="PostTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="374" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="206" tableViewCell="205">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="February 17th" lineBreakMode="tailTruncation" minimumFontSize="10" id="611" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="right" misplaced="YES">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="21"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="636" firstAttribute="width" constant="334"/>
+                                                        <constraint id="637" firstAttribute="height" constant="21"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="636"/>
+                                                            <exclude reference="637"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="636"/>
+                                                            <include reference="637"/>
+                                                        </mask>
+                                                        <rect key="frame" x="20" y="0.0" width="334" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" id="612" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontSizeToFit="NO" numberOfLines="0" misplaced="YES">
+                                                    <rect key="frame" x="20" y="29" width="265" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="640" firstAttribute="width" constant="284"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="640"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="640"/>
+                                                        </mask>
+                                                        <rect key="frame" x="20" y="31" width="334" height="58.5"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint id="634" firstItem="206" firstAttribute="trailing" secondItem="611" secondAttribute="trailing" constant="20"/>
+                                                <constraint id="635" firstItem="611" firstAttribute="top" secondItem="206" secondAttribute="top"/>
+                                                <constraint id="639" firstItem="206" firstAttribute="bottom" secondItem="612" secondAttribute="bottom" constant="10"/>
+                                                <constraint id="650" firstItem="612" firstAttribute="leading" secondItem="206" secondAttribute="leading" constant="20"/>
+                                                <constraint id="664" firstItem="612" firstAttribute="top" secondItem="611" secondAttribute="bottom" constant="30"/>
+                                                <constraint id="669" firstItem="206" firstAttribute="trailing" secondItem="612" secondAttribute="trailing" constant="89"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="634"/>
+                                                    <exclude reference="635"/>
+                                                    <exclude reference="639"/>
+                                                    <exclude reference="650"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="634"/>
+                                                    <include reference="635"/>
+                                                    <include reference="639"/>
+                                                    <include reference="650"/>
+                                                </mask>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="99.5"/>
+                                            </variation>
+                                        </view>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="611" id="name-outlet-611"/>
+                                            <outlet property="messageLabel" destination="612" id="name-outlet-612"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="user" lineBreakMode="tailTruncation" minimumFontSize="10" id="200" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="53" y="76" width="527" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="124" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Gender Neutral User Filled-100.png">
+                                <rect key="frame" x="20" y="74" width="25" height="25"/>
+                                <constraints>
+                                    <constraint id="197" firstAttribute="width" constant="25"/>
+                                    <constraint id="198" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="217" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="530" y="530" width="50" height="50"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2" green="0.41960784313725491" blue="0.52941176470588236" alpha="1"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="222" firstAttribute="width" constant="50"/>
+                                    <constraint id="223" firstAttribute="height" constant="50"/>
+                                </constraints>
+                                <connections>
+                                    <segue id="359" destination="315" kind="show"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="298" translatesAutoresizingMaskIntoConstraints="NO" image="Images/Edit Filled-500.png" misplaced="YES">
+                                <rect key="frame" x="545" y="545" width="20" height="20"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2" green="0.41960784313725491" blue="0.52941176470588236" alpha="1"/>
+                                <constraints>
+                                    <constraint id="305" firstAttribute="width" constant="20"/>
+                                    <constraint id="306" firstAttribute="height" constant="20"/>
+                                </constraints>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="296" firstItem="241" firstAttribute="trailing" secondItem="217" secondAttribute="trailing" constant="20"/>
+                            <constraint id="297" firstItem="241" firstAttribute="bottom" secondItem="217" secondAttribute="bottom" constant="20"/>
+                            <constraint id="308" firstItem="298" firstAttribute="centerY" secondItem="217" secondAttribute="centerY"/>
+                            <constraint id="309" firstItem="298" firstAttribute="centerX" secondItem="217" secondAttribute="centerX"/>
+                            <constraint id="362" firstItem="124" firstAttribute="leading" secondItem="241" secondAttribute="leading" constant="20"/>
+                            <constraint id="363" firstItem="200" firstAttribute="centerY" secondItem="124" secondAttribute="centerY"/>
+                            <constraint id="364" firstItem="200" firstAttribute="leading" secondItem="124" secondAttribute="trailing" constant="8"/>
+                            <constraint id="366" firstItem="241" firstAttribute="trailing" secondItem="200" secondAttribute="trailing" constant="20"/>
+                            <constraint id="369" firstItem="204" firstAttribute="top" secondItem="200" secondAttribute="bottom" constant="10"/>
+                            <constraint id="372" firstItem="124" firstAttribute="top" secondItem="237" secondAttribute="bottom" constant="10"/>
+                            <constraint id="373" firstItem="204" firstAttribute="bottom" secondItem="241" secondAttribute="bottom"/>
+                            <constraint id="609" firstItem="204" firstAttribute="leading" secondItem="241" secondAttribute="leading" constant="20"/>
+                            <constraint id="610" firstItem="241" firstAttribute="trailing" secondItem="204" secondAttribute="trailing" constant="20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="writeNewPostButton" destination="217" id="name-outlet-217"/>
+                        <outlet property="userPictureImageView" destination="124" id="name-outlet-124"/>
+                        <outlet property="userNameLabel" destination="200" id="name-outlet-200"/>
+                        <outlet property="postsTableView" destination="204" id="name-outlet-204"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="242" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="3"/>
+        </scene>
+        <scene sceneID="314">
+            <objects>
+                <viewController id="315" sceneMemberID="viewController" customClass="PostViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="312"/>
+                        <viewControllerLayoutGuide type="bottom" id="313"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="316">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Post to facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="510" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="74" width="473" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="511" misplaced="YES">
+                                <rect key="frame" x="501" y="71" width="79" height="27"/>
+                                <color key="onTintColor" colorSpace="calibratedRGB" red="0.2" green="0.41960784313725491" blue="0.52941176470588236" alpha="1"/>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="517" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" image="Images/Gender Neutral User Filled-100.png">
+                                <rect key="frame" x="20" y="106" width="25" height="25"/>
+                                <constraints>
+                                    <constraint id="520" firstAttribute="width" constant="25"/>
+                                    <constraint id="521" firstAttribute="height" constant="25"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="user" lineBreakMode="tailTruncation" minimumFontSize="10" id="523" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="53" y="108" width="527" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="527" translatesAutoresizingMaskIntoConstraints="NO" text="Journal entry..." misplaced="YES">
+                                <rect key="frame" x="20" y="139" width="560" height="441"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="512" firstItem="316" firstAttribute="trailing" secondItem="511" secondAttribute="trailing" constant="20"/>
+                            <constraint id="513" firstItem="511" firstAttribute="top" secondItem="312" secondAttribute="bottom" constant="7"/>
+                            <constraint id="514" firstItem="511" firstAttribute="leading" secondItem="510" secondAttribute="trailing" constant="8"/>
+                            <constraint id="515" firstItem="510" firstAttribute="centerY" secondItem="511" secondAttribute="centerY"/>
+                            <constraint id="516" firstItem="510" firstAttribute="leading" secondItem="316" secondAttribute="leading" constant="20"/>
+                            <constraint id="518" firstItem="517" firstAttribute="leading" secondItem="316" secondAttribute="leading" constant="20"/>
+                            <constraint id="522" firstItem="517" firstAttribute="top" secondItem="510" secondAttribute="bottom" constant="11"/>
+                            <constraint id="524" firstItem="523" firstAttribute="leading" secondItem="517" secondAttribute="trailing" constant="8"/>
+                            <constraint id="525" firstItem="523" firstAttribute="centerY" secondItem="517" secondAttribute="centerY"/>
+                            <constraint id="526" firstItem="316" firstAttribute="trailing" secondItem="523" secondAttribute="trailing" constant="20"/>
+                            <constraint id="528" firstItem="527" firstAttribute="top" secondItem="523" secondAttribute="bottom" constant="10"/>
+                            <constraint id="529" firstItem="527" firstAttribute="leading" secondItem="316" secondAttribute="leading" constant="20"/>
+                            <constraint id="530" firstItem="316" firstAttribute="trailing" secondItem="527" secondAttribute="trailing" constant="20"/>
+                            <constraint id="531" firstItem="527" firstAttribute="bottom" secondItem="313" secondAttribute="top" constant="1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Title" id="481" translatesAutoresizingMaskIntoConstraints="NO" key="navigationItem">
+                        <barButtonItem id="538" translatesAutoresizingMaskIntoConstraints="NO" key="rightBarButtonItem" systemItem="done"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postToFacebookSwitch" destination="511" id="name-outlet-511"/>
+                        <outlet property="userPictureImageView" destination="517" id="name-outlet-517"/>
+                        <outlet property="userNameLabel" destination="523" id="name-outlet-523"/>
+                        <outlet property="journalEntryTextView" destination="527" id="name-outlet-527"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="317" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Images/News Filled-500.png" width="500" height="500"/>
+        <image name="Images/Gender Neutral User Filled-100.png" width="100" height="100"/>
+        <image name="Images/Edit Filled-500.png" width="500" height="500"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina55"/>
+    </simulatedMetricsContainer>
+</document>
